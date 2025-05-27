@@ -1,0 +1,178 @@
+1.1.
+start
+new age number
+set age 17
+
+if (age > 17)
+  log string "u can buy"
+else
+  log string "sorry, but u cann't buy"
+
+close
+  
+finish
+
+1.2.
+start
+new ourMoney number
+set ourMoney 17
+
+new price number
+set price 18
+
+if (price > ourMoney)
+  log string "sorry, but u cann't buy"
+else
+  log string "u can buy"
+close
+  
+finish
+
+1.3.
+start
+new AB number
+set AB 10
+
+new BC number
+set BC 23 + 10
+new CD number
+set CD 33
+new AD number
+set AD 50
+
+log string "AB: " >> AB >> " мин. BC с ожиданием автобуса 10 минут: " >> BC >> " мин. CD " >> CD >> " мин"
+log string "AD: " >> AD >> " мин"
+  
+finish
+
+1.4.
+start
+
+new a number
+set a 10
+new b number
+set b 12
+new c number
+set c 14
+new d number
+set d 16
+
+new x number
+set x 17
+
+if (x > a)
+  if (x > b)
+    if (x > c)
+      
+      if (x > d)
+        log string "d < x"
+      else
+        log string "c < x <= d"
+      close
+
+    else
+      log string "b < x <= c"
+    close
+  else
+    log string "a < x <= b"
+  close
+ 
+else
+  log string "x <= a"
+close
+
+finish
+
+2.1.
+start
+
+new i number 
+set i 1
+
+loop print (11 > i)
+log number i
+set i i + 1
+end print
+
+finish
+
+2.2.
+start
+
+new i number
+set i 1
+new j number
+set j 1
+
+new result number
+new temp number
+? Для цикла умножения
+new counter number
+
+loop outerLoop (10 > i)
+
+    loop innerLoop (10 > j)
+        set result 0
+        set counter i
+        
+        loop multiplyLoop (counter > 0)
+            set result result + j
+            set counter counter - 1
+        end multiplyLoop
+        log string i >> " * " >> j >> " = " >> result
+
+        set j j + 1
+    end innerLoop
+    set j 1
+
+    set i i + 1
+end outerLoop
+
+finish
+
+2.3.
+start
+
+new num number
+set num 2
+
+new result number
+set result 0
+
+new i number
+set i 0
+
+loop lazy (num > i)
+set result result + num
+set i i + 1
+end lazy
+
+set result result + 2
+
+log string "x = " >> result
+
+finish
+
+
+
+2.4.
+start
+? длина 100, написал  1 000 000 чтобы получить 3,14 но только без запятой
+new length number
+set length 1000000
+
+?диаметр 31.83, зачем так написал уже выше
+new diameter number
+set diameter 3183
+
+new pi number
+set pi 0
+
+loop ImTired (length > diameter)
+set pi pi + 1
+set length length - diameter
+end ImTired
+
+log number pi
+
+finish
